@@ -1,0 +1,187 @@
+:root {
+  --line-height: 45px;
+  --search-field-br: 8px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+body {
+  height: 100vh;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 9;
+  background-color: #fff;
+}
+
+.container {
+  width: 900px;
+}
+
+@media (max-width: 901px) {
+  .container {
+    max-width: 680px;
+  }
+}
+@media (max-width: 681px) {
+  .container {
+    max-width: 400px
+  }
+  .main .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .result__title {
+    text-align: center;
+  }
+  .result__description {
+    text-align: center;
+  }
+  .response__services {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+@media (max-width: 401px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+.main .container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.logo {
+  height: var(--line-height);
+  margin: 0 auto
+}
+
+.response {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.response__search {
+  display: flex;
+  align-items: center;
+  background-color: #FFC93D;
+  padding: 2px;
+  height: var(--line-height);
+  border-radius: var(--search-field-br);
+}
+
+.search__field {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--search-field-br);
+  padding: 20px 10px;
+  font-size: 1.2rem;
+
+  outline: none;
+  border: none;
+}
+
+.search__btn {
+  background: transparent;
+  width: 120px;
+  height: 90%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.response__result {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result__title {
+  font-weight: 500;
+}
+
+.result__description {
+  font-family: 300;
+}
+
+.result__description-link {
+  color: #2D73BF;
+}
+
+.result__description-link:hover {
+  color: #00f;
+}
+
+.response__services {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: space-between;
+  height: 7rem;
+  width: calc(100% - 120px);
+}
+
+.services__service {
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service__link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  color: #2D73BF;
+}
+
+.service__link:hover {
+  color: #00f;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 24px;
+  height: 30px;
+}
+
+.footer__nav * {
+  color: #777;
+}
+
+.nav__link:hover {
+  color: #333;
+}
